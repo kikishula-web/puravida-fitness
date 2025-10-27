@@ -1,31 +1,67 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #fff8e7, #ffeebd);
-  color: #333;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+:root{
+  --green:#064e3b;
+  --pine:#f9d74c;
+  --pine-dark:#ffb300;
+  --ink:#333;
+  --paper:#fffef5;
 }
 
-header {
-  background-color: #fbb034;
-  color: white;
-  padding: 20px 0;
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  line-height:1.6;
 }
 
-.intro {
-  margin-top: 40px;
+.hero{
+  text-align:center; padding:40px 20px;
+  color:var(--green);
+  background:linear-gradient(135deg, var(--pine), var(--pine-dark));
+  border-bottom:6px solid var(--green);
+}
+.logo{width:120px; height:auto; border-radius:12px; filter:drop-shadow(0 4px 10px rgba(0,0,0,.25));}
+.logo-wrap{margin-bottom:10px}
+.subtitle{opacity:.9; margin-top:6px}
+.badges{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:12px 0 8px}
+.badges span{background:#ffffffb3; padding:6px 10px; border-radius:999px; font-size:14px}
+
+.section{max-width:900px; margin:0 auto; padding:40px 20px}
+h1,h2{color:var(--green); text-align:center; margin:0 0 14px}
+.list{max-width:760px; margin:0 auto; padding-left:18px}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+.card{background:#fff; border:1px solid #eee; border-radius:12px; padding:16px; box-shadow:0 8px 20px rgba(0,0,0,.03)}
+.card h3{margin:0 0 8px; color:var(--green)}
+
+.how .steps{max-width:760px; margin:0 auto; padding-left:18px}
+.hint{opacity:.8; text-align:center; margin-top:10px}
+
+.testimonials blockquote{
+  background:#fff; border-left:4px solid var(--green);
+  padding:12px 16px; border-radius:10px; margin:10px auto; max-width:760px;
 }
 
-button {
-  background-color: #fbb034;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
+.buy{text-align:center}
+.price span{font-size:34px; font-weight:700; color:var(--green)}
+.cta-group{display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:14px}
 
-button:hover {
-  background-color: #ffa500;
+.btn{
+  display:inline-block; cursor:pointer; text-decoration:none;
+  padding:12px 22px; border-radius:10px; font-weight:600; transition:.2s;
 }
+.btn-primary{background:var(--pine); color:var(--green); border:2px solid var(--green)}
+.btn-primary:hover{background:var(--pine-dark); transform:translateY(-1px)}
+.btn-outline{background:#fff; color:var(--green); border:2px solid var(--green)}
+.btn-outline:hover{background:#f3fff9}
+
+.price-note{display:block; margin-top:6px; color:#1f2937; opacity:.9}
+
+.label-more summary{cursor:pointer; color:var(--green); font-weight:600}
+.guarantee{max-width:760px; margin:10px auto 0}
+
+.faq details{max-width:760px; margin:8px auto; background:#fff; border:1px solid #eee; border-radius:8px; padding:12px}
+.faq summary{font-weight:600; color:var(--green); cursor:pointer}
+
+.notice{padding-top:0}
+.fda{display:block; text-align:center; opacity:.75}
+
+.footer{background:var(--green); color:#fff; text-align:center; padding:22px}
